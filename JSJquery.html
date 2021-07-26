@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSJquery by Jo Duckette</title>
+    <link rel="styleSheet" href="CSS/JSJquery.css">
+</head>
+
+<body>
+    <h1>JS allows access, modify, program(brower), react(to events)</h1>
+    <p>script is a series of instruction</p>
+    <!-- docu.write always append to the content -->
+    <p id="documentWrite">document is an object, you can use document.write() 
+        to append to the end of the page
+    </p>
+
+
+    <h2>inner html vs. text content</h2>
+    <p>inner html supply text or html code, while textContent just provide text</p>
+    <p id="txtContent">example of textContent</p>
+    <p id="innerHtml">example of innerHtml</p>
+    <h2>3 types of functions</h2>
+    <ol>
+        <li>function delaration - your normal way of doing</li>
+        <li>function expression - with = sign (thats why expression</li>
+        <li>IIFE - immediately invoked function expression (want to execute immediately for speed)</li>
+    </ol>
+    <P>below is a anonymous function expression in JS file</P>
+    <p id="area"></p>
+    <p>below is an iFFE example, invoking immediately</p>
+    <p id="iffe"></p>
+
+    <h2>you can put function inside an object an invoke it</h2>
+    <p id="room"></p>
+    <!-- js must be put last, because it runs as the last item -->
+    <h2>3 types of JS built in objects (oop) - for CRUD</h2>
+    <ol>
+        <li>window.document/history/location/navigator/screen</li>
+        <li>document.elements</li>
+        <li>js objects - string, num, boolean, date, math, regex</li>
+    </ol>
+    <h2>below example print out the location, width and height of the window</h2>
+    <p id="window"></p>
+
+    <h2>below acess document object to print out title and lastModified</h2>
+    <p id="document"></p>
+    <h2>date newDate() create an object - GetTime(time in miliseconds since 1971)</h2>
+    <p id="date"></p>
+    <p>you can use different ways to manipualte the date, getTime() to extract min seconds since 1971,
+        toDateString() to convert into easier to digest format
+        You can also specify date by new Date(yy, mm, dd, hh. mm, ss)
+    </p>
+    <P id="getTime"></P>
+    <P id="DateString"></P>
+    <p>we can use getTime to calculate time difference/no of milisecond in a year
+        to calcate how many years have passed.
+    </p>
+
+    <h1>DoM - document object model</h1>
+    <img src="images/DOM.png" width="300px">
+    <ol>
+        <li>html codes are sent to browser</li>
+        <li>browser creates a DOM model and store in its memory</li>
+        <li>Html elements are the nodes of the dom tree</li>
+        <li>each node has its own attribues (css) or text nodes (text)</li>
+        <li>you could access any nodes to update its attributes or text, add or remove any nodes (CRUD-
+            create, read, update, delete)</li>
+        <li>the update of nodes only happened in memory, not the actual html codes itself</li>
+        <li>when we found that element, we simply reference to it, rather than storing them</li>
+        <li>you can also access nodeList (multi-element), e.g. getElementbyTagName("h1")</li>
+    </ol>
+    <h2>below are different ways to access DOM elements</h2>
+    <a>different ways of accessing element</a>
+    <br>
+    <h2>Summary</h2>
+    <ul>
+        <li>Script is series of instructions based on nodes. e.g. document is a node. which 
+            you can write document.write() to append to the page
+        </li>
+        <li>textContent supplies text, while innerHTML supplies both string and html</li>
+        <li>3 types of function - declaration, expression, IFFE</li>
+        <li>3 types of objects - window, document.el, js objects e.g. date</li>
+        
+    </ul>
+        <script src="JS/JSJquery.js">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+ul{
+    background-color: black;
+    width: 300px;
+}
+
+ul li{
+    color: white;
+    list-style-type: none;
+    font-size: 30px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.hot{
+    background-color: rgb(255, 91, 50);
+}
+
+.cool{
+    background-color: #037e7e;
+}
+
+.complete{
+    background-color: rgb(94, 94, 94);
+}
+
+#four{
+    background-color: orange;
+}

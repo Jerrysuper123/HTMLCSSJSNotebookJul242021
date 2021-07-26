@@ -1,0 +1,12 @@
+li{
+    display: inline;
+    border: 1px solid black;
+}
+
+.hide{
+    display: none;
+}
+
+.invisible{
+    visibility: hidden;
+}

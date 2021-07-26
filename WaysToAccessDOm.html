@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accessDom</title>
+    <link rel="styleSheet" href="CSS/waysToAccessDOm.css">
+</head>
+<body>
+    <h1 id="header">List Kings</h1>
+    <h2>buy groceries</h2>
+    <uL>
+        <li id="one" class="hot"><em>fresh</em> figs</li>
+        <li id="two" class="hot">pine nuts</li>
+        <li id="three" class="hot">honey</li>
+        <li id="four">balsamic vinegar</li>
+    </uL>
+
+    <p>you can get the first element, an change its className to "cool"</p>
+    <h2>DOM queries to return nodeList</h2>
+    <p>getElementbyTagName - by html syntax to get</p>
+    <p>getElementsbyClassName - by classNames</p>
+    <p>querySelectorAll('li[id]') - query all li tag with id name</p>
+    <p>when you get a nodeList, you can treat it as array.
+        use item(0), or [0] to retrieve 0 index item; you can also loop through all
+    </p>
+    <h2>traverse the dom</h2>
+    <p>parentNode</p>
+    <P>previousSibling/nextSibling (deprecated); now previousElementsSibling</P>
+    <p>firstChild/lastChild (depreciated); now firstElementChild</p>
+    <h2>use nodevalue to update a node</h2>
+    <h2>use inner html to add/remove html content</h2>
+    <ol>
+        <li>add element using innerHTML</li>
+        <li>remove elment by setting innerHTML to an empty string</li>
+    </ol>
+    <h2>adding/removing element manipulating dom, below are 3 steps</h2>
+    <ol>
+        <li>createElement() - this simply create syntax</li>
+        <li>createTextNode - this simply create text</li>
+        <li>appendChild() - add text to the new element,</li>
+    </ol>
+    <h2>how to remove element</h2>
+    <ol>
+        <li>find the element</li>
+        <li>find the parent node of the element</li>
+    </ol>
+    <h2>summary - 3 types of ways to update elements</h2>
+    <ol>
+        <li>document.write - rately used</li>
+        <li>innerHTML - security risk - prone to cross site scripting (xss) attack</li>
+        <li>DOM manipulation - createEelement, removeelement etc</li>
+    </ol>
+    <h2>attributes - set, get, has, remove</h2>
+    <script src="JS/acessingDOM.js">
+
+    </script>
+</body>
+</html>

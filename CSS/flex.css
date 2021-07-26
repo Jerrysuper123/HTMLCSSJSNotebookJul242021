@@ -1,0 +1,65 @@
+
+
+.flexBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+
+    margin: 12px;
+    border-color:navajowhite;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 12px;
+    
+}
+
+.box1{
+    height: 200px;
+    width: 100px;
+    /* background-color: red; */
+    text-align: center;
+     /* must put width, line style, and color */
+    border-color: lightslategray;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 12px;
+}
+
+.box1:hover{
+    background-color: black;
+    color: yellowgreen;
+}
+.box1:active{
+    background-color: red;
+    color: yellow;
+}
+
+.box2{
+    height: 100px;
+    width: 100px;
+    background-color:green;
+
+    border-color: lightslategray;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 12px;
+}
+
+.box3{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+
+    border-color: lightslategray;
+    border-width: 0.1em;
+    border-style: solid;
+    border-radius: 12px;
+}
+
+.summary{
+    background-color: rgb(241, 241, 241);
+    padding: 12px;
+    border-radius: 12px;
+}
+

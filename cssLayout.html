@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout</title>
+    <link rel="stylesheet" href="CSS/cssLayout.css">
+</head>
+
+<body>
+    <h1>Below explains different layouts in CCS; top, bottom, left or right is to specify the element in the whole page, instead of parent element</h1>
+    <P>normal flow, relative to normal flow, aboslutely taken out of normal flow, fixed regardless of noraml flow, float left/right (clear left or right)
+        
+    </P>
+    <h2>Normal flow - from up to down, stack on top of each other </h2>
+    <p>this is the first para
+    </p>
+    <p>this is the second para
+    </p>
+    <p>this is the third para
+    </p>
+
+    <h2>relative - using top, bottom, left and right to indicate how far to move the element from its orignal position
+        in normal flow</h2>
+    <p>this is the first paragraph
+    </p>
+    <p class="relativeElement">
+        this is the second para, that set postion: relative - away from its original position. 
+        top and left set up px space
+    </p>
+    <p>
+        this is the 3rd paragraph
+    </p>
+
+    <div>
+        <h2 class="absoluteElement">absolute - absolutely take out of normal flow, you can flow it left or right bottom or up; it does overlap over other elements as if they are not there</h2>
+        <p class="ab">
+            this is the first para
+        </p>
+        <p class="ab">If someone tells you that you've come up with a novel idea or a novel interpretation of something,
+            it's probably a compliment: not everyone is capable of original thinking.
+            But not everything new is terribly worthwhile; a novelty, for example,
+            is often a cute (or maybe just silly) little object that you might put on a display shelf in your house.
+        </p>
+    </div>
+    <h2 class="fixElement">fixed - fixed the position in browser</h2>
+    <h2 class="">Z-index is to say who is top of the other</h2>
+
+    <h2>float is to float a quote to the left or right, float and fit in the paragraphs</h2>
+    <blockquote>float - it is for writing layout, float a quote to the left or right </blockquote>
+    <p>If someone tells you that you've come up with a novel idea or a novel interpretation of something,
+        it's probably a compliment: not everyone is capable of original thinking.
+        But not everything new is terribly worthw4ehile; a novelty, for example,
+        is often a cute (or maybe just silly) little object that you might put on a display shelf in your house.
+    </p>
+    <p>If someone tells you that you've come up with a novel idea or a novel interpretation of something,
+        it's probably a compliment: not everyone is capable of original thinking.
+        But not everything new is terribly worthwhile; a novelty, for example,
+        is often a cute (or maybe just silly) little object that you might put on a display shelf in your house.
+    </p>
+
+    <h2>Use float to arrangement paragraphs </h2>
+    <div class="floatElement">
+        <p class="floatPara">use float to arrange paragraph is much better, becos it is responsive.
+            No of columns increase or decrease with the screen size </p>
+         
+            <p class="floatPara">If someone tells you that you've come up with a novel idea or a novel interpretation of something,
+                it's probably a compliment: not everyone is capable of original thinking.
+                But not everything new is terribly worthwhile; a novelty, for example,
+                is often a cute (or maybe just silly) little object that you might put on a display shelf in your house.
+            </p>
+            <p class="floatPara">If someone tells you that you've come up with a novel idea or a novel interpretation of something,
+                it's probably a compliment: not everyone is capable of original thinking.
+            </p>
+            <p class="floatPara3">this 4 para's left side initially touches the right of 2 para, then we use clear: left; to clear anything on the left
+                and move the 4para to the very left side
+            </p>
+            <p class="floatPara">give border line to floatlements only has the top border line; we fixed this by adding overflow: auto and width: 100%
+            </p>
+
+    </div>
+    <h2>use float for multi-columns layout， which is responsive</h2>
+    <p class="threecolumns">this is the first paragraph, floated to left, with width 300px</p>
+    <p class="threecolumns">this is the second paragraph, floated to left, with width 300px</p>
+    <ul class="threecolumns">
+        <li>September 16</li>
+        <li>1942</li>
+    </ul>
+    
+
+    <h1 class="summary">summary for arranging the layout</h1>
+    <ol>
+        <li>normal flows from up to downwards, stack on each other</li>
+        <li>poistion relative to its normal-flow position with top, botoom, left and right px margin</li>
+        <li>position absolute to take out of the normal flow, could overlap others</li>
+        <li>position fixed to fixed the element on the browser</li>
+        <li>float is to arrange the quote in paragraph</li>
+        <li>float could also arrange 2 to 3 para, with clear: left to bring outliner to left</li>
+        <li>float is usually use for liquid layout for 2, or 3 columns layout</li>
+    </ol>
+    <!-- <div>
+        <p>4 para cannot float to the left because it is blocked by the second paragraph</p>
+    <img src="images/4para.png" width="300px">
+    </div>
+     -->
+</body>
+
+</html>

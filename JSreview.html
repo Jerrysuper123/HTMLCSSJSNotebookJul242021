@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS review</title>
+</head>
+
+<body>
+    <h1>DOM - document object model</h1>
+    <UL>
+        <li>DOM is just a tree structure looking at HTML</li>
+        <li>each brand ends with a node, which contain object</li>
+        <li>we can use documdnt.getElementbyId to access certain node, and add evenrt listener to it</li>
+    </UL>
+    <img src="images/DOM.png" width="300px">
+
+    <h2>JS can change the html content</h2>
+    <p id="change">Use Id tag for JS, content to be changed</p>
+    <button type="button" onClick='document.getElementById("change").innerHTML="hello"'>Click here to change
+        id="change"</button>
+
+    <h2>JS also can change attribute - color</h2>
+    <div id="changeColor" style="background-color: yellow">text</div>
+    <button type="button" ; onclick='document.getElementById("changeColor").style="background-color: black;"'>
+        Click me to access id-changeColor to access style to change the attribute of style
+    </button>
+
+    <button type="button" ; onclick='document.getElementById("changeColor").style="background-color: yellow;"'>
+        Click me to access id-changeColor to access style to change back to yellow
+    </button>
+
+    <h2>JS could change the CSS Style</h2>
+    <p id="size">size 16px</p>
+    <button type="button" ; onclick='document.getElementById("size").style.fontSize="100px"'>
+        Click me to access id-size to change size from 16 to 100px
+    </button>
+
+    <h2>JS could hide/unhide the element</h2>
+    <p id="hide">hide me</p>
+    <button type="button" ; onclick='document.getElementById("hide").style.display="none"'>
+        Click me to access id-hide to change display to none
+    </button>
+
+    <button type="button" ; onclick='document.getElementById("hide").style.display="block"'>
+        Click me to access id-hide to change display to block
+    </button>
+
+    <h2>JS can exist in head, body or external file with script tag</h2>
+    <h2>you can use window.alert() to call out something on browser</h2>
+    <p id="hide2">when you access onclick on an element, you call a function, written in script tag</p>
+    <button type="button" ; onclick="myFunction()">
+        Click me to access id-hide2 to change display to block
+    </button>
+    <script>
+        function myFunction() {
+            document.getElementById("hide2").style.display = "none";
+            window.alert("you have hidden it")
+        }
+
+        const myJSON = '{"name":"John", "age":30, "car":null}';
+        const myObj = JSON.parse(myJSON);
+        function demo(){
+            document.getElementById("demo").innerHTML = myObj.name;
+        }
+    </script>
+
+    <h2>at browser, you can use complex funciton built in script to interact with users</h2>
+    <h1>what is Json data?</h1>
+    <ol>
+        <li>JSOn - javascript object notation, used to send data between computer</li>
+        <li>it is like just object in javascript, except it is a string</li>
+        <li>example: '{"name":"John", "age":30, "car":null}'</li>
+        <lO>when send in the air, Json is a string, when we received, we use
+            parse functiion to change the string into object
+        </lO>
+        <li>when we use Ajax (aynschononouly donwloading) - to retrieve Json data, we then parse it and convert into object for accessing</li>
+        <li>when we user to send data into the air, we use stringnify to convert object into Json</li>
+        <p>
+            const obj = {name: "John", age: 30, city: "New York"};
+const myJSON = JSON.stringify(obj);
+document.getElementById("demo").innerHTML = myJSON;
+        </p>
+    </ol>
+    <p id="demo">haha</p>
+    <button tyoe="button" onclick="demo()">click to access Json.property</button>
+
+</body>
+
+</html>
