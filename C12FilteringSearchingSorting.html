@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12</title>
+    <linK rel="stylesheet" href="CSS/table.css">
+       
+</head>
+<body id="body">
+    <h2>revision on table</h2>
+    <p>syntax, table, th, tr, td</p>
+    <p>try dynamic fitering</p>
+    <table>
+        <tr>
+            <th></th>
+            <th scope="col">Sat</th>
+            <th scope="col">Sun</th>
+        </tr>
+        <tr>
+            <th scope="row">Sold:</th>
+            <td>120</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <th scope='row'>Sales:</th>
+            <td>$30</td>
+            <td>$33</td>
+        </tr>
+    </table>
+    <h2 id='append'>filter array data append to body below</h2>
+    <p>forEach(function) and filter(function) are great ways to filter the table</p>
+    <input type="text" name="searchTxt" id="userInput">
+    <input type="submit" onclick="display()">
+    <table id="filterTable"></table>
+
+    <h2>search iamges by data-tags</h2>
+    <input type="text" name="searchTxt" id="searchTxt">
+    <input type="submit" id="searchIMG" onclick="search()">
+    <br> 
+    <img id="json" src="images/JSON.png" data-tags="json" width="300px">
+    <img id="call" src="images/fishbone.png" data-tags="call" width="300px">
+    <img id="dom" src="images/DOM.png" data-tags="DOM" width="300px">
+    <p>var prices=[3,2,1]</p>
+    <p>prices.sort(a,b){ return a-b}</p>
+    <p>above is ascending order</p>
+    <script src="JS/C12FSS.js"></script>
+</body>
+</html>

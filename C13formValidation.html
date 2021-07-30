@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formValidation</title>
+</head>
+
+<body>
+
+    <h2>the form properties, below 4 form main properties for form</h2>
+    <ol>
+        <li>action - which url to submit to </li>
+        <li>method - Get or Post metho</li>
+        <li>name - rarely used, usually we use ID attribute to select</li>
+        <li>elements - a collection of elements within form; how to access</li>
+        <ol>
+            <li>you can access form by array index or name attribute</li>
+            <li> e.g. document.forms[1] - access first form</li>
+            <li>document.forms.login - access the form by its name attribute</li>
+            <li>you can access form's elements (inner elements) by array index or name attribute</li>
+            <li>document.form[1].elements[0]</li>
+            <li>document.forms[1].elements.password</li>
+        </ol>
+
+    </ol>
+    <h2>form method</h2>
+    <ol>
+        <li>submit method</li>
+        <li>reset method to reset the input to inital value</li>
+    </ol>
+
+    <h2>form control uses a combination of properties, methods and events</h2>
+    <h3>property</h3>
+    <ol>
+        <li>value - value of text input</li>
+        <li>type - it could be text, password, submit button, radio, or check box</li>
+        <li>name - name attribute that you set</li>
+        <li>defaultValue - placeholder when page initally loaded</li>
+        <li>diabled - true or false to disble the form</li>
+        <li>checked - true or false to see if checkbox or radio button have been clicked</li>
+        <li>selected - true or false to see if a select box has been selected</li>
+    </ol>
+    <h3>method</h3>
+    <ol>
+        <li>focus() - focus on an input</li>
+        <li>blur() - leave an input</li>
+        <li>select() - select or highlight content of an element</li>
+        <li>click() - trigger a click even</li>
+    </ol>
+    <h3>event</h3>
+    <ol>
+        <li>blur - leave a field</li>
+        <li>focus - enter a field</li>
+        <li>change - when input value changes</li>
+        <li>inout - when input of input or textarea changes</li>
+        <li>keyDown, KeyUp, keyPress</li>
+    </ol>
+
+    <form id="login" action="">
+        <div class="two-thirds column" id="main">
+            <fieldset>
+                <legend>Login</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+
+                <label for="password">Password:</label>
+                <input type="password" id="pwd" name="pwd">
+
+                <!-- add in password checkbox -->
+                <input type="checkbox" id="showPwd">
+                <label for="showPwd">Show password</label>
+                <input type="submit" value="submit" id="submit">
+            </fieldset>
+        </div>
+
+    </form>
+
+    <h2>select all or unclear other check boxes</h2>
+    <form id="interests">
+        <label><input type="checkbox" value="all" id="all">All</label>
+        <label><input type="checkbox" name="genre" value="animation">Animation</label>
+        <label><input type="checkbox" name="genre" value="docs">Documentary</label>
+        <label><input type="checkbox" name="genre" value="shorts">Shorts</label>
+    </form>
+
+    <h2>html5</h2>
+    <input type="search" placeholder="search..." autofocus autocomplete="jerry">
+    <input type="range" min="0" max="20" step="2" value="6">
+    <input type="date">
+    <input type="datetime">
+    <h2>use isrequired or empty to validate input</h2>
+    <input type="text"/>
+
+    <script src="JS/formValidation.js"></script>
+</body>
+
+</html>

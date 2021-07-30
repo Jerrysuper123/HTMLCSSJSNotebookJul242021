@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Errorhandling</title>
+</head>
+<body>
+    <h2>2 types of execution context</h2>
+    <p>when code executed, there are basically 2 types of context</p>
+    <li>Global context - variable is in global scope</li>
+    <li>local context - varaible is in local scope/functional scope</li>
+    <h2>call stack</h2>
+    <p>when f1 needs info from f2, f1 will stack f2 on top of itself until it is executed</p>
+</body>
+<h2>how code is excecuted</h2>
+<ol>
+    <li>prepare - create all variables, parameters and functions</li>
+    <li>executed</li>
+</ol>
+<p>that is why varibles, and paramter and functions are hoisted/raised to top
+    to be created; so that below can work - you call function before its creation
+</p>
+<P>var greeting = greetUser();</P>
+<p>function greetUser(){}</p>
+<h2>it is important to handle error, program crash and users do not know why</h2>
+<h2>types of error objects</h2>
+<li>syntax error - grammar error</li>
+<li>reference error - variable refered does not exist</li>
+<li>URI error - incorrect use of URI function - some characters not escaped #?</li>
+<li>type error - we do not expect the data type (method does not exist</li>
+<li>range error - cannot use array with -1 items</li>
+<li>Nan error - not a number, if you use height*3 = NAN</li>
+<lo>we can use try, catch, finally to catch error</lo>
+<div id="catchError"></div>
+<script src="JS/error.js"></script>
+
+</html>

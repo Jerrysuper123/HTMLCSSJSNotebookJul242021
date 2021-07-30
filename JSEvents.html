@@ -26,13 +26,28 @@
     </ol>
     <h2>3 ways of binding</h2>
     <li>html event handler (do not use)</li>
-    <li>DOM event handler - can only trigger one function</li>
-    <li>event listener - can trigger multiple functions</li>
+    <li>DOM event handler - can only trigger one function el.onEvent = functionName</li>
+    <li>event listener - can trigger multiple functions
+        el.addEventLisentner(event, function, booean (flow))
+    </li>
+    <li>Event flow - false (event bubbling specifc to less specific
+        true (event capturing) - event generic to specific
+    </li>
+    <li>event can be passed into function as a parameter</li>
+    <li>event delegation - find parent node for event, the delegate to its children</li>
+    <li>preventDefault - when you submit form, it will take you to another page, this function stop it</li>
+    <li>stopPropagation - stop flow either event bubbling/event capturing</li>
     <br>
     <form method="post" action="">
         <label for="userName">Create a userName:</label>
-
+        <input type="text" id="userName" onblur="checkUsername()"/>
+        <div id="feedback"></div>
+        <label for="password">Create a password:</label>
+        <input type="password" id="password"/>
+        <input type="submit" id="submitButton" value="Sign up!"/>
     </form>
-    </script>
+    <script
+        src="js/event.js"
+    ></script>
 </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax and Json</title>
+    <link rel="styleSheet" href="CSS/Ajax.css">
+</head>
+<body>
+    <h2>Ajax - asynchronous JS xml</h2>
+    <P>synchronous processing model - load page line by line</P>
+    <p>asynchronous processing model - load template first, then load data from server later</p>
+
+    <h2>how ajax works</h2>
+    <ol>
+        <li>request - browser request info from server</li>
+        <li>server - sending back html, xml or Json data</li>
+        <li>the response - browser receive info from server, process, add it back to html page</li>
+    </ol>
+
+    <h2>how request and respond works in codes</h2>
+    <ul>
+        <li id="comment">create new request</li>
+        <li>var request = new XMLHTTPRequest();</li>
+        <li id="comment">prepare the request - get method, url to get data, true -async</li>
+        <li>request.open('GET','URL',true</li>
+        <li id="comment">send request</li>
+        <li>requst.send();</li>
+    </ul>
+
+    <h2>how request and respond works in codes</h2>
+    <ul>
+        <li id="comment">load completed, trigger by event onLoad</li>
+        <li id="comment">check status, and execute the code</li>
+        <li>request.onLoad = function(){if(request.status = 200){do somethin}}</li>
+    </ul>
+
+    <h2>3 types of data server returns - in air is always string</h2>
+    <ol>
+        <li>HTML</li>
+        <li>XML</li>
+        <img src="images/xml.png">
+        <li>JSON - js object notation</li>
+        <li>when sending over, you must JSON.stringify(object), when receiving
+            you must JSON.parse(string) into object
+        </li>
+        <img src="images/JSON.png">
+    </ol>
+    <h2>load html with ajax</h2>
+    <li>var xhr = new XMLHTTPRequest()</li>
+    <li>xhr.open("GET",'URL", true)</li>
+    <li>xhr.send(null)</li>
+    <li>xhr.onLoad = function(if(xhr.status = 200){document.getElementbyID('content').innerHTML=xhr.responseText})</li>
+
+</body>
+</html>

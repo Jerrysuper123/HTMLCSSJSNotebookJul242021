@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>API</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        
+        <script>
+        $( function() {
+          $( "#accordion" ).accordion();
+        } );
+
+        $( function() {
+          $( "#prize" ).accordion();
+        } );
+        </script>
+        
+      </head>
+<body>
+    <h1>API - use other people's program to do somethin</h1>
+    <lI>know what can API do? DOM and JQuery alow you to repsond to events</lI>
+    <li>know how to access it? Jquery to download or put link into the script</li>
+    <li>Know the syntax to use it - Jquery syntax is different from JS</li>
+    <h2>HTML 5 API - geolocation, local/session storage, history</h2>
+    <p>below display longitude and latitude of your location</p>
+    <div id="loc"></div>
+
+    <h2>browser storage - local or sessions</h2>
+    <li>stored in local - all opened tabs can access the data, even when you a window, still can access</li>
+    <li>session - closed window, data gone, not all windows can access the data</li>
+    <div id="local">access local storage</div>
+    <label>userName:</label>
+    <input type="text" id="userName">
+
+    <p id="output">here</p>
+
+    <h2>history API - boring do want to learn</h2>
+    <h2>below is to use Jquery plug in</h2>
+    <div id="accordion">
+        <h3>1st prize</h3>
+        <div><p>car</p></div>
+        <h3>2st prize</h3>
+        <div><p>IPAD</p></div>
+    </div>
+
+    <div id="prize">
+        <h3>1st prize</h3>
+        <div><p>car</p></div>
+        <h3>2st prize</h3>
+        <div><p>IPAD</p></div>
+    </div>
+
+    <script src="JS/API.js"></script>
+
+</body>
+</html>
