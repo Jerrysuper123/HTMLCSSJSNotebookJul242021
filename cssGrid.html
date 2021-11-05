@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 40% 30% 30%;
+            /* set column gap */
+            /* column-gap: 1em;
+            row-gap: 1em; */
+            grid-gap: 1em;
+        }
+
+        .wrapper>div {
+            background: #eee;
+            padding: 1em;
+        }
+
+        /* warpper div child odd child to have a stronger grey */
+        .wrapper>div:nth-child(odd) {
+            background: #ddd;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .wrapper {
+                grid-template-columns: 50% 50%;
+            }
+        }
+
+        /* part 2 of grid css */
+        .wrapper2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+
+            /* set all rows to be 100Px high, but text could overflow*/
+            /* grid-auto-rows: 100px; */
+
+            /* below set min to be 100px and max to be auto */
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .wrapper2>div {
+            background: #eee;
+            padding: 1em;
+        }
+
+        /* warpper div child odd child to have a stronger grey */
+        .wrapper2>div:nth-child(odd) {
+
+            background: #ddd;
+        }
+
+        .nested {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 70px;
+            grid-gap: 1em;
+
+        }
+
+        .nested>div {
+            border: 1px solid black;
+            padding: 1em;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>flexbox is to layout things in one dimensions</p>
+    <p>css grid allows to layout things in 2 dimensions</p>
+    <p>display: grid (does not do anything, just set the parent
+        to be grid display
+    </p>
+    <p>grid-template-columns: 30% 30% 40%;</p>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ad modi sunt, optio molestiae excepturi vel
+            necessitatibus omnis, nam exercitationem itaque illum velit voluptatibus? Exercitationem deleniti harum
+            atque culpa error quidem nemo obcaecati accusamus autem vero quibusdam ratione quo, modi molestiae ducimus
+            nisi corrupti voluptatum in. Cupiditate nobis laborum nihil voluptas, fugiat ex neque enim laudantium odit
+            molestiae repellendus vel placeat quod non odio labore illo provident aperiam deleniti. Saepe iste aliquid
+            vel corrupti illum autem molestiae omnis quo eos!
+
+        </div>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore libero dolores hic. Architecto accusamus
+            ipsam dolores! Hic excepturi animi, deserunt officia, exercitationem aut facere corporis, ratione
+            consectetur accusantium est labore.
+
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ad modi sunt, optio molestiae excepturi vel
+            necessitatibus omnis, nam exercitationem itaque illum velit voluptatibus? Exercitationem deleniti harum
+            atque culpa error quidem nemo obcaecati accusamus autem vero quibusdam ratione quo, modi molestiae ducimus
+            nisi corrupti voluptatum in. Cupiditate nobis laborum nihil voluptas, fugiat ex neque enim laudantium odit
+            molestiae repellendus vel placeat quod non odio labore illo provident aperiam deleniti. Saepe iste aliquid
+            vel corrupti illum autem molestiae omnis quo eos!
+
+        </div>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore libero dolores hic. Architecto accusamus
+            ipsam dolores! Hic excepturi animi, deserunt officia, exercitationem aut facere corporis, ratione
+            consectetur accusantium est labore.
+
+        </div>
+        <div>hello</div>
+
+
+    </div>
+
+    <p>part 2 of grid</p>
+    <P>it is recommended to use fr (fraction to represent unit),
+        repea(4, 1fr) means 4 * 1fr
+
+    </P>
+    <div class="wrapper2">
+        <div>Lorem ipsum dolor sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, dolores quisquam
+            autem voluptas maxime neque cupiditate amet repellendus ducimus itaque quas quam hic illum unde officiis
+            porro est veniam voluptate consequuntur. Nam sapiente nihil sint ab rem quasi cumque velit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+
+        <div class="nested">
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+            <div>lorem</div>
+        </div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+        <div>Lorem ipsum dolor sit.</div>
+    </div>
+</body>
+
+</html>
