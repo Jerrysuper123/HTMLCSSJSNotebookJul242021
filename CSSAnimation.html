@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSSAnimation</title>
     <link rel="styleSheet" href="CSS/CSSAnimation.css">
+
+    <style>
+        .parent {
+            background-color: hsla(200, 100%, 20%);
+            height: 400px;
+            width: 400px;
+        }
+
+        .child {
+            background-color: red;
+            width: 50%;
+            height: 50%;
+            transition: transform 1s cubic-bezier(0.46, 0.15, 0.97, 1.42) 0.1s;
+        }
+
+        .parent:hover .child {
+            background-color: green;
+            transform: translateX(100%) translateY(100%);
+        }
+
+        /* below is for aniamtion */
+        .parentA {
+            background-color: hsla(200, 100%, 20%);
+            height: 400px;
+            width: 400px;
+        }
+
+        .childA {
+            background-color: red;
+            width: 50%;
+            height: 50%;
+            transition: transform 1s cubic-bezier(0.46, 0.15, 0.97, 1.42) 2s;
+        }
+
+        .parentA:hover .childA {
+            /* instead of 2 times, you can put infinit below */
+            animation: left-to-right 1s ease-in forwards 2 alternate;
+        }
+
+        @keyframes left-to-right {
+
+            /* definie 0-100% how you want to frame to move */
+            0% {
+                transform: translateX(0);
+            }
+
+            33% {
+                transform: translateY(100%);
+            }
+
+            /* the move is always based on 0% point of reference */
+            66% {
+                transform: translateX(100%) translateY(100%)
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+
+        }
+
+        .box2 {
+            width: 30px;
+            height: 30px;
+            background-color: indigo;
+            animation: rotateAlways 1s linear forwards infinite;
+
+        }
+
+        @keyframes rotateAlways {
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
 </head>
+
+
 <body>
     <p>move from left to right, animation: (moveFunction) (5s from A to B) (infinite to move)</p>
     <P>@keyframes moveFunction{ from {left:0px} to{left: 200px}}</P>
@@ -14,10 +93,52 @@
 
     </div>
 
-    <br/>
+    <br />
 
     <div class="box">
 
     </div>
+
+    <!-- paretnt child movement, learning from web dev simplified -->
+    <hr>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <p>
+        transition is animation, first start with 2 arguments
+        first one specific what function to transition (transform in our case), and how many second to achieve the
+        transition
+
+    </p>
+    <p>always put the transition into the element that you want to animate</p>
+    <p>Timing function: the third argument is how you want the element to move</p>
+    <ul>
+        <li>linear - move linearly</li>
+        <li>ease-in-out, start slow (ease speed), pick up speed in mode, out of speed</li>
+        <li></li>
+    </ul>
+    <p>the fourth argument is the delay - if you put 3 second, it will delay 3 seconds before moving</p>
+    <ul>
+        <li>arg 1 - what transform</li>
+        <li> arg 2 - move many seconds</li>
+        <li>arg 3 - how to move - linear, ease in out, </li>
+        <li>arg 4 - delay</li>
+    </ul>
+
+    <p>below is for animation</p>
+    <div class="parentA">
+        <div class="childA"></div>
+    </div>
+    <p>use animation: name of transform, 1s, ease-in, forwards (what to do after completing 100%</p>
+    <P>you can specify keyframes, 0 to 100% frames what do you want it to do</P>
+    <p>animation arguments (name of animation, how many seconds to do,
+        ease-in, forwards (go forwards not stopping), 3 or Infinite (how many times of animation), alternate(reverse
+        direction)
+        , 3s (3s delay before moving)
+    </p>
+
+    <p>rotating square</p>
+    <div class="box2"></div>
 </body>
+
 </html>
