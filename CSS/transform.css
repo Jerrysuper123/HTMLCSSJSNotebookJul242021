@@ -1,0 +1,25 @@
+div {
+  background: cornflowerblue;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  color: white;
+  font-size: x-large;
+  justify-content: center;
+  align-items: center;
+  /* transform: rotate(0.1turn); */
+  /* or 90deg */
+  /* transform: scale(1.5, 2); */
+  /* transform: translate(100%); */
+  position: relative;
+  transform: skewy(20deg) translateY(100px);
+}
+
+div::after {
+  content: "after";
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
