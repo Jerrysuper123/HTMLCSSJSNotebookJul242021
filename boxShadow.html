@@ -6,7 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/boxShadow.css" />
+    <!-- <link rel="stylesheet" href="CSS/boxShadow.css" /> -->
+
+    <style>
+        .boxShadow {
+            background-color: rgb(255, 255, 255);
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            /* 4 properties, x axis, y axis, blur, spread and color/opacity */
+            box-shadow: 0px 20px 30px 0px hsla(0, 73%, 68%, 0.102),
+                /* adding second layer */
+                0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        }
+    </style>
 </head>
 
 <body>
